@@ -11,7 +11,15 @@
                 <hr class="sidebar-divider">
 
                 <a class="sidebar-brand d-flex align-items-center justify-content-center">
+<<<<<<< HEAD
                     <div class="sidebar-brand-icon"></div>
+=======
+                    <div class="sidebar-brand-icon">
+                        <img src="asset/frontend/images/egatlogo.png" alt="logo"
+                                class="img-fluid"
+                            style="width: 200px; height: auto;">
+                    </div>
+>>>>>>> 498eb31336dc8b32cc5b53877fbb66b6c0c96cad
                 </a>
 
                 <hr class="sidebar-divider my-3">
