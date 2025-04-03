@@ -18,4 +18,8 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [UserController::class, 'adminDashboard'])->name('dashboard'); // เส้นทาง Admin
     Route::get('/user-dashboard', [UserController::class, 'userDashboard'])->name('user-dashboard'); // เส้นทาง User
+
+    Route::get('/home', function () {
+        return view('home');
+    })->name('home');
 });
