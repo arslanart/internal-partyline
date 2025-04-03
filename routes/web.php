@@ -12,7 +12,7 @@ Route::post('/login', [LoginController::class, 'loginPost'])->name('login'); // 
 
 Route::middleware([
     'auth:sanctum',
-    config('jetstream.auth_session'),
+    config(key: 'jetstream.auth_session'),
     'verified',
     'check_user_type'
 ])->group(function () {
