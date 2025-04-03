@@ -10,7 +10,9 @@
 
                 <a class="sidebar-brand d-flex align-items-center justify-content-center">
                     <div class="sidebar-brand-icon">
-
+                        <img src="asset/frontend/images/egatlogo.png" alt="logo"
+                                class="img-fluid"
+                            style="width: 200px; height: auto;">
                     </div>
                 </a>
 
