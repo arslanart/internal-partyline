@@ -19,10 +19,10 @@ class CheckUserType
     public function handle(Request $request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->user_type == 'admin' && !$request->is('dashboard')) {
-                return redirect()->route('dashboard');
-            } elseif (Auth::user()->user_type == 'user' && !$request->is('user-dashboard')) {
-                return redirect()->route('user-dashboard');
+            if (Auth::user()->user_type == 'admin' && !$request->is('home')) {
+                return redirect()->route('home');
+            } elseif (Auth::user()->user_type == 'user' && !$request->is('home-user')) {
+                return redirect()->route('home-user');
             }
         }
 

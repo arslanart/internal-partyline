@@ -24,7 +24,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($credentials)) {
-            return redirect('/dashboard')->with('success', 'Login Success');
+            return redirect('/home')->with('success', 'Login Success');
             // dd($request);
         }
 

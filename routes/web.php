@@ -17,11 +17,8 @@ Route::middleware([
     'verified',
     'check_user_type'
 ])->group(function () {
-    Route::get('/dashboard', [UserController::class, 'adminDashboard'])->name('dashboard'); // เส้นทาง Admin
-    Route::get('/user-dashboard', [UserController::class, 'userDashboard'])->name('user-dashboard'); // เส้นทาง User
+    Route::get('/home', [UserController::class, 'adminDashboard'])->name('home'); // เส้นทาง Admin
+    Route::get('/home-user', [UserController::class, 'userDashboard'])->name('home-user'); // เส้นทาง User
 
 });
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
