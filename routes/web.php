@@ -31,7 +31,7 @@ Route::middleware([
         return view('alarm'); // ส่งเฉพาะเนื้อหาของ Alarm
     })->name('alarm');
 
-    Route::get('/admin', function () {
-        return view('admin'); // ส่งเฉพาะเนื้อหาของ Administrator
-    })->name('admin');
+    Route::get('/administrator', function () {
+        return view('administrator'); // ส่งเฉพาะเนื้อหาของ Administrator
+    })->name('administrator');
 });

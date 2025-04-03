@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sidebar-link" href="{{ route('admin') }}" data-url="{{ route('admin') }}">
+                    <a class="nav-link sidebar-link" href="{{ route('administrator') }}" data-url="{{ route('administrator') }}">
                         <i class="fas fa-fw fa-male"></i>
                         <span>Administrator</span>
                     </a>
