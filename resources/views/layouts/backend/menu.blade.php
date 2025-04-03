@@ -1,10 +1,4 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4 table-responsive">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="sidebar-brand-icon">
-            <img src="{{ asset('asset/frontend/images/egatlogo.png') }}" alt="logo" class="img-fluid"
-                style="width: auto; height: auto;">
-        </div>
-    </a>
     <nav class="mt-2 table-responsive">
         <div id="wrapper">
             <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion table-responsive" id="accordionSidebar">
