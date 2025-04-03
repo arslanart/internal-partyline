@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Alarm extends Component
+class AlarmMenu extends Component
 {
     public function render()
     {

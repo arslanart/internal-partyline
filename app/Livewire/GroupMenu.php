@@ -3,11 +3,12 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Groups;
 
-class Inventory extends Component
+class GroupMenu extends Component
 {
     public function render()
     {
-        return view('livewire.inventory');
+        return view('livewire.group');
     }
 }

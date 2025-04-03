@@ -4,10 +4,10 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Group extends Component
+class HomeMenu extends Component
 {
     public function render()
     {
-        return view('livewire.group');
+        return view('livewire.home');
     }
 }
