@@ -15,7 +15,7 @@
                 <hr class="sidebar-divider my-3">
 
                 <!-- Nav Items -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link sidebar-link" href="{{ route('home') }}" data-url="{{ route('home') }}">
                         <i class="fas fa-fw fa-home"></i>
                         <span>Home</span>
