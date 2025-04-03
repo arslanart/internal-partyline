@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
     return view('auth.login');
+
 });
 
 Route::post('/login', [LoginController::class, 'loginPost'])->name('login'); // ส่งข้อมูลไปยัง LoginController
@@ -19,7 +20,8 @@ Route::middleware([
     Route::get('/dashboard', [UserController::class, 'adminDashboard'])->name('dashboard'); // เส้นทาง Admin
     Route::get('/user-dashboard', [UserController::class, 'userDashboard'])->name('user-dashboard'); // เส้นทาง User
 
-    Route::get('/home', function () {
-        return view('home');
-    })->name('home');
 });
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
