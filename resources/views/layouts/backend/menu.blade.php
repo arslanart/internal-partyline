@@ -41,7 +41,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sidebar-link" href="{{ route('administrator') }}" data-url="{{ route('administrator') }}">
+                    <a class="nav-link sidebar-link" href="{{ route('administrator') }}"
+                        data-url="{{ route('administrator') }}">
                         <i class="fas fa-fw fa-male"></i>
                         <span>Administrator</span>
                     </a>
@@ -52,31 +53,36 @@
 </aside>
 
 <!-- Content Area -->
-<div id="content-wrapper">
-    <!-- Dynamic content will be loaded here -->
+<!-- Dynamic content will be loaded here -->
+<div>
+    <div class="content-wrapper">
+        <h1>Home</h1>
+        <p>This is the Home page.</p>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        // ดักจับการคลิกที่ลิงก์ใน Sidebar
         $('.sidebar-link').on('click', function(e) {
             e.preventDefault(); // ป้องกันการโหลดหน้าใหม่
 
             const url = $(this).data('url'); // ดึง URL จาก data-url
             const title = $(this).find('span').text(); // ดึงชื่อเมนู
 
-            // เปลี่ยน URL ด้านบนของเบราว์เซอร์โดยไม่โหลดหน้าใหม่
+            // เปลี่ยน URL ด้านบนโดยไม่โหลดหน้าใหม่
             window.history.pushState({
                 path: url
             }, title, url);
 
             // โหลดเนื้อหาแบบไดนามิก
-            $('#content-area').html('<p>Loading...</p>'); // แสดงข้อความ Loading
+            $('#content-area').html('<p>Loading...</p>');
             $.get(url, function(data) {
-                $('#content-area').html(data); // แสดงเนื้อหาที่โหลดมา
+                // ตัดเฉพาะเนื้อหาของเพจ ไม่โหลดซ้ำ navbar
+                const content = $(data).find('#content-area').html();
+                $('#content-area').html(content);
             }).fail(function() {
-                $('#content-area').html('<p>Error loading content.</p>'); // แสดงข้อความ Error
+                $('#content-area').html('<p>Error loading content.</p>');
             });
         });
 
@@ -85,10 +91,10 @@
             if (event.state && event.state.path) {
                 const url = event.state.path;
 
-                // โหลดเนื้อหาใหม่เมื่อเปลี่ยน URL
                 $('#content-area').html('<p>Loading...</p>');
                 $.get(url, function(data) {
-                    $('#content-area').html(data);
+                    const content = $(data).find('#content-area').html();
+                    $('#content-area').html(content);
                 }).fail(function() {
                     $('#content-area').html('<p>Error loading content.</p>');
                 });

@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>INMS</title>
     @include('layouts.backend.css')
-    @livewireStyles
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    @livewireStyles
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

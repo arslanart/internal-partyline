@@ -20,11 +20,11 @@ Route::middleware([
     Route::get('/home-user', [UserController::class, 'userDashboard'])->name('home-user'); // เส้นทาง User
 
     Route::get('/group', function () {
-        return view('group'); // ส่งเฉพาะเนื้อหาของ Group
+        return view('livewire.group'); // ส่งเฉพาะเนื้อหาของ Group
     })->name('group');
 
     Route::get('/inventory', function () {
-        return view('inventory'); // ส่งเฉพาะเนื้อหาของ Inventory
+        return view('livewire.inventory'); // ส่งเฉพาะเนื้อหาของ Inventory
     })->name('inventory');
 
     Route::get('/alarm', function () {
