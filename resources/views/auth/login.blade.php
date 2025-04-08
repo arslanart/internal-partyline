@@ -80,17 +80,19 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-12.5">
-                                <button class="btn btn-primary" type="submit">Login</button>
-
-                            </div>
-
-                            <div class="block mt-4">
+                            <div class="block mt-4 mb-4">
                                 <label for="remember_me" class="flex items-center">
                                     <x-checkbox id="remember_me" name="remember" />
                                     <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                                 </label>
                             </div>
+
+                            <div class="col-md-12.5">
+                                <button class="btn btn-primary mb-4" type="submit">Login</button>
+
+                            </div>
+
+
 
 
                             </div>
