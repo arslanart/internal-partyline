@@ -54,12 +54,7 @@
 
 <!-- Content Area -->
 <!-- Dynamic content will be loaded here -->
-<div>
-    <div class="content-wrapper">
-        <h1>Home</h1>
-        <p>This is the Home page.</p>
-    </div>
-</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
