@@ -24,19 +24,19 @@ Route::middleware([
 
     // เมนูแยกต่างหาก
     Route::get('/group', function () {
-        return view('pages.group');
+        return view('group');
     })->name('group');
 
     Route::get('/inventory', function () {
-        return view('pages.inventory');
+        return view('inventory');
     })->name('inventory');
 
     Route::get('/alarm', function () {
-        return view('pages.alarm');
+        return view('alarm');
     })->name('alarm');
 
     Route::get('/administrator', function () {
-        return view('pages.administrator');
+        return view('administrator');
     })->name('administrator');
 
     // Optional: หากยังต้องการแยก Admin กับ User Dashboard เดิม
