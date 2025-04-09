@@ -8,30 +8,38 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::post('/login', [LoginController::class, 'loginPost'])->name('login'); // ส่งข้อมูลไปยัง LoginController
+Route::post('/login', [LoginController::class, 'loginPost'])->name('login');
 
 Route::middleware([
     'auth:sanctum',
-    config(key: 'jetstream.auth_session'),
+    config('jetstream.auth_session'),
     'verified',
     'check_user_type'
 ])->group(function () {
-    Route::get('/home', [UserController::class, 'adminDashboard'])->name('home'); // เส้นทาง Admin
-    Route::get('/home-user', [UserController::class, 'userDashboard'])->name('home-user'); // เส้นทาง User
 
+    // หน้าแรกหลังล็อกอิน
+    Route::get('/home', function () {
+        return view('home'); // หน้า home.blade.php แสดง dashboard หรือ welcome
+    })->name('home');
+
+    // เมนูแยกต่างหาก
     Route::get('/group', function () {
-        return view('livewire.group'); // ส่งเฉพาะเนื้อหาของ Group
+        return view('pages.group');
     })->name('group');
 
     Route::get('/inventory', function () {
-        return view('livewire.inventory'); // ส่งเฉพาะเนื้อหาของ Inventory
+        return view('pages.inventory');
     })->name('inventory');
 
     Route::get('/alarm', function () {
-        return view('alarm'); // ส่งเฉพาะเนื้อหาของ Alarm
+        return view('pages.alarm');
     })->name('alarm');
 
     Route::get('/administrator', function () {
-        return view('administrator'); // ส่งเฉพาะเนื้อหาของ Administrator
+        return view('pages.administrator');
     })->name('administrator');
+
+    // Optional: หากยังต้องการแยก Admin กับ User Dashboard เดิม
+    // Route::get('/dashboard/admin', [UserController::class, 'adminDashboard'])->name('dashboard.admin');
+    // Route::get('/dashboard/user', [UserController::class, 'userDashboard'])->name('dashboard.user');
 });
